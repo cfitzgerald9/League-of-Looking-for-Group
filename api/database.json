@@ -1,0 +1,31 @@
+{
+    "users":[],
+    "messages":[],
+    "friends":[],
+    "purposes":[
+        {
+            "type": "ARAMs",
+            "id": 1
+        },
+        {
+            "type": "Ranked Duo",
+            "id": 2
+        },
+        {
+            "type": "Ranked Flex",
+            "id": 3
+        },
+        {
+            "type": "Normal Draft",
+            "id": 4
+        },
+        {
+            "type": "Normal Blind",
+            "id": 5
+        },
+        {
+            "type": "Co-op vs AI",
+            "id": 6
+        }
+    ]
+}
