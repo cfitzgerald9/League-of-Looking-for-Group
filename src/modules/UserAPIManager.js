@@ -12,6 +12,9 @@ export default {
         body: JSON.stringify(newUser)
       }).then(data => data.json())
     },
+    getByEmail: email =>
+    fetch(`http://localhost:5002/users?email=${email}`)
+    .then(e => e.json()),
     getOneUser: id =>
     fetch(`http://localhost:5002/users/${id}`)
     .then(user => user.json()),

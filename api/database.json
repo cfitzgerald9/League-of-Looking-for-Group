@@ -71,9 +71,74 @@
       "purposeId": 5,
       "summonerName": "lilmonkk",
       "id": 9
+    },
+    {
+      "username": "bab",
+      "email": "bab@bab.com",
+      "password": "b",
+      "purposeId": 4,
+      "summonerName": "diamonddiabetic",
+      "summonerId": "",
+      "id": 10
+    },
+    {
+      "username": "rien",
+      "email": "y@y.com",
+      "password": "y",
+      "purposeId": 1,
+      "summonerName": "themagickingdom2",
+      "bio": "im a cool dude",
+      "champs": "yasuo",
+      "id": 11
+    },
+    {
+      "username": "geewhizz",
+      "email": "g@g.com",
+      "password": "g",
+      "purposeId": 2,
+      "summonerName": "meshaisataco",
+      "bio": "im a cool dude",
+      "champs": "yasuo",
+      "id": 12
     }
   ],
-  "messages": [],
+  "messages": [
+    {
+      "text": "blarg",
+      "userId": "1",
+      "id": 13
+    },
+    {
+      "text": "blarg",
+      "userId": "1",
+      "id": 14
+    },
+    {
+      "text": "blarg",
+      "userId": "1",
+      "id": 15
+    },
+    {
+      "text": "haha",
+      "userId": "1",
+      "id": 16
+    },
+    {
+      "text": "testin",
+      "userId": "6",
+      "id": 17
+    },
+    {
+      "text": "testin 2",
+      "userId": "6",
+      "id": 18
+    },
+    {
+      "text": "hmmm",
+      "userId": "1",
+      "id": 19
+    }
+  ],
   "friends": [],
   "purposes": [
     {

@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import UserAPIManager from '../../modules/UserAPIManager'
 
 export default class Login extends Component {
     state = {
@@ -11,17 +12,28 @@ export default class Login extends Component {
         this.setState(stateToChange)
     }
 
-    handleLogin = (e) => {
+    handleLogin = e => {
         e.preventDefault();
+        UserAPIManager.getByEmail(this.state.email).then(user => {
+          let errorMessage = "";
+          if (user.length === 0) {
+            errorMessage =
+              "We couldn't find that email address in our records. Would you like to create an account?";
+            this.setState({ errorMessage: errorMessage });
+          } else {
+            if (user[0].password === this.state.password) {
         sessionStorage.setItem(
-            "credentials",
-            JSON.stringify({
-                email: this.state.email,
-                password: this.state.password
-            })
-        )
-        this.props.history.push("/")
-    }
+                    "credentials",
+                    JSON.stringify(user[0].id)
+                  );
+              this.props.history.push("/");
+            } else {
+              errorMessage = "Your password was incorrect. Please try again.";
+              this.setState({ errorMessage: errorMessage });
+            }
+          }
+        });
+      };
   render(){
         return (
             <React.Fragment>

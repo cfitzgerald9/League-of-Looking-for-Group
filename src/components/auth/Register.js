@@ -1,12 +1,15 @@
 import React, { Component } from "react"
 import UserAPIManager from '../../modules/UserAPIManager'
+import RiotAPIManager from '../../modules/RiotAPIManager'
+import RiotConfig from '../../modules/RiotConfig'
 export default class Register extends Component {
     state = {
         email: "",
         password: "",
         username: "",
         summonerName: "",
-        purposeId: ""
+        purposeId: "",
+        summonerId: ""
     }
 
     handleFieldChangeUser = evt => {
@@ -23,9 +26,13 @@ export default class Register extends Component {
             email: this.state.userEmail,
             password: this.state.userPassword,
             purposeId: parseInt(this.state.userPurposeId),
-            summonerName: this.state.userSummonerName
+            summonerName: this.state.userSummonerName,
+            bio: this.state.userBio,
+            champs: this.state.userChamps
+
         }
-        UserAPIManager.getOneUser(this.state.email).then(user => {
+        UserAPIManager.getByEmail(this.state.email).then(user => {
+            RiotAPIManager.getByName(user.summonerName, RiotConfig.apiKey)
             this.props.registerUser(userToPost).then(user => {
                 sessionStorage.setItem("credentials", JSON.stringify(user.id));
                 this.props.history.push("/");
@@ -37,7 +44,7 @@ export default class Register extends Component {
 
     render() {
         return (
-            <form onSubmit={this.constructNewUser}>
+            <form onSubmit={this.constructNewUser} className="registrationForm">
                 <h1 className="h3 mb-3 font-weight-normal">Please register an account.</h1>
                 <label htmlFor="inputEmail">
                     Email address
@@ -60,14 +67,34 @@ export default class Register extends Component {
                     id="userPassword"
                     placeholder="Password"
                     required="" />
-                <label htmlFor="inputPassword">
+                <label htmlFor="inputSummoner">
                     Summoner name
                 </label>
                 <input onChange={this.handleFieldChangeUser} type="text"
                     id="userSummonerName"
                     placeholder="Summoner name"
                     required="" />
-
+                <label htmlFor="inputChamps">
+                    What champions do you play?
+                </label>
+                <input onChange={this.handleFieldChangeUser} type="text"
+                    id="userChamps"
+                    placeholder="champs"
+                    required="" />
+                <label htmlFor="inputPic">
+                    Link a picture!
+                </label>
+                <input onChange={this.handleFieldChangeUser} type="url"
+                    id="userPic"
+                    placeholder="Pic"
+                    required="" />
+                <label htmlFor="inputBio">
+                    Tell us about yourself!
+                </label>
+                <input onChange={this.handleFieldChangeUser} type="text"
+                    id="userBio"
+                    placeholder="Bio"
+                    required="" />
                 <label htmlFor="purpose">What are you interested in?</label>
                 <select onChange={this.handleFieldChangeUser}
                     name="purpose"

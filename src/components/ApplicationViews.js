@@ -7,8 +7,7 @@ import SearchComponent from './search/SearchComponent'
 import Register from './auth/Register';
 import Login from './auth/Login'
 import UserAPIManager from '../modules/UserAPIManager'
-import RiotAPIManager from '../modules/RiotAPIManager'
-import RiotConfig from '../modules/RiotConfig'
+
 
 export default class ApplicationViews extends Component {
     state = {
@@ -19,18 +18,48 @@ export default class ApplicationViews extends Component {
     }
     isAuthenticated = () => sessionStorage.getItem("credentials") !== null
     registerUser = (userObject) => UserAPIManager.postUser(userObject);
-
 	refreshUsers = () =>
 		UserAPIManager.getAllUsers().then((parsedUsers) => {
 			this.setState({ users: parsedUsers });
-		});
+        });
+        addMessage = (newItem) => {
+            return fetch(`http://localhost:5002/messages`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(newItem)
+            })
+                .then((d) => d.json())
+                .then(() => {
+                    fetch('http://localhost:5002/messages?_expand=user')
+                        .then((r) => r.json())
+                        .then((messages) => this.setState({ messages: messages }));
+                });
+        };
+        updateMessage = (editedObject) => {
+            return fetch(`http://localhost:5002/messages/${editedObject.id}`, {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(editedObject)
+            })
+                .then((data) => data.json())
+                .then(() =>
+                    fetch('http://localhost:5002/messages?_expand=user').then((r) => r.json()).then((messages) => {
+                        this.setState({
+                            messages: messages
+                        });
+                    })
+                );
+        };
     componentDidMount() {
         const newState = {};
         UserAPIManager.getAllUsers()
           .then(users => (newState.users = users))
           .then(UserAPIManager.getAllPurposes)
           .then(purposes => (newState.purposes = purposes))
-          .then(RiotAPIManager.getByName("meshaisataco", RiotConfig.apiKey))
           .then(() => this.setState(newState));
       }
     render() {
@@ -39,7 +68,8 @@ export default class ApplicationViews extends Component {
                 <Route
                     path="/login"
                     render={props => {
-                        return <Login {...props}/>
+                        return <Login {...props}
+                        users={this.state.users}/>
                     }}
                 />
                   <Route
@@ -56,7 +86,8 @@ export default class ApplicationViews extends Component {
                     path="/"
                     render={(props) => {
                         if (this.isAuthenticated()) {
-                            return <ProfileComponent {...props} />
+                            return <ProfileComponent {...props}
+                            users = {this.state.users} />
                         } else {
                             return <Redirect to="/login" />;
                         }
@@ -78,7 +109,10 @@ export default class ApplicationViews extends Component {
                     path="/messages"
                     render={(props) => {
                         if (this.isAuthenticated()) {
-                        return <ChatComponent {...props} />
+                        return <ChatComponent {...props}
+                        messages = {this.state.messages}
+                        users = {this.state.users}
+                        addMessage = {this.addMessage} />
                     } else {
                         return <Redirect to="/login" />;
                     }

@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import RiotAPIManager from '../../modules/RiotAPIManager'
+import RiotConfig from '../../modules/RiotConfig'
+
 
 export default class SearchComponent extends Component {
     state = {
@@ -32,6 +35,7 @@ export default class SearchComponent extends Component {
               <div className="card-body">
                   <p>Nickname: {user.username}</p>
                   <p>In-game: {user.summonerName}</p>
+                  <p>Id: {RiotAPIManager.getByName(user.summonerName, RiotConfig.apiKey).id} </p>
                   <button>Add Friend</button>
               </div>
             </div>
