@@ -1,31 +1,104 @@
 {
-    "users":[],
-    "messages":[],
-    "friends":[],
-    "purposes":[
-        {
-            "type": "ARAMs",
-            "id": 1
-        },
-        {
-            "type": "Ranked Duo",
-            "id": 2
-        },
-        {
-            "type": "Ranked Flex",
-            "id": 3
-        },
-        {
-            "type": "Normal Draft",
-            "id": 4
-        },
-        {
-            "type": "Normal Blind",
-            "id": 5
-        },
-        {
-            "type": "Co-op vs AI",
-            "id": 6
-        }
-    ]
+  "users": [
+    {
+      "username": "cone",
+      "email": "connor@gmail.com",
+      "password": "p",
+      "purposeId": 4,
+      "summonerName": "meshaisataco",
+      "id": 1
+    },
+    {
+      "username": "peenix",
+      "email": "q@q.com",
+      "password": "q",
+      "purposeId": 6,
+      "summonerName": "lilbadwitch",
+      "id": 2
+    },
+    {
+      "username": "geen",
+      "email": "e@e.com",
+      "password": "e",
+      "purposeId": 6,
+      "summonerName": "steezygene",
+      "id": 3
+    },
+    {
+      "username": "jock",
+      "email": "t@t.com",
+      "password": "t",
+      "purposeId": 6,
+      "summonerName": "jakiepoooh",
+      "id": 4
+    },
+    {
+      "username": "jirdoon",
+      "email": "lmao@l.com",
+      "password": "l",
+      "purposeId": 3,
+      "summonerName": "etsuacoil",
+      "id": 5
+    },
+    {
+      "username": "gob",
+      "email": "y@y.com",
+      "password": "y",
+      "purposeId": 6,
+      "summonerName": "gabethebabe6",
+      "id": 6
+    },
+    {
+      "username": "whale-x",
+      "email": "d@d",
+      "password": "dd",
+      "purposeId": 2,
+      "summonerName": "infamous monarch",
+      "id": 7
+    },
+    {
+      "username": "neek",
+      "email": "hopper4u@bunnytrail.com",
+      "password": "1",
+      "purposeId": 1,
+      "summonerName": "partyfoust",
+      "id": 8
+    },
+    {
+      "username": "metchu",
+      "email": "h@h.com",
+      "password": "1",
+      "purposeId": 5,
+      "summonerName": "lilmonkk",
+      "id": 9
+    }
+  ],
+  "messages": [],
+  "friends": [],
+  "purposes": [
+    {
+      "type": "ARAMs",
+      "id": 1
+    },
+    {
+      "type": "Ranked Duo",
+      "id": 2
+    },
+    {
+      "type": "Ranked Flex",
+      "id": 3
+    },
+    {
+      "type": "Normal Draft",
+      "id": 4
+    },
+    {
+      "type": "Normal Blind",
+      "id": 5
+    },
+    {
+      "type": "Co-op vs AI",
+      "id": 6
+    }
+  ]
 }
