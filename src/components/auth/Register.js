@@ -28,11 +28,12 @@ export default class Register extends Component {
             purposeId: parseInt(this.state.userPurposeId),
             summonerName: this.state.userSummonerName,
             bio: this.state.userBio,
-            champs: this.state.userChamps
+            champs: this.state.userChamps,
+            summonerId: this.state.summonerId,
+            pic: this.state.userPic
 
         }
         UserAPIManager.getByEmail(this.state.email).then(user => {
-            RiotAPIManager.getByName(user.summonerName, RiotConfig.apiKey)
             this.props.registerUser(userToPost).then(user => {
                 sessionStorage.setItem("credentials", JSON.stringify(user.id));
                 this.props.history.push("/");

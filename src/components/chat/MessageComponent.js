@@ -4,8 +4,8 @@ export default class MessageComponent extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<div key={this.props.message.id} className="chat">
-					<span id={this.props.message.userId} className="chat-name">
+				<div key={this.props.message.id} className="messageContainer">
+					<span id={this.props.message.userId} className="singleMessage">
 						{this.props.message.user.username}:
 					</span>{' '}
 					{this.props.message.text}

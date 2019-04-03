@@ -9,8 +9,8 @@ class NavBar extends Component {
     render() {
         return (
             <React.Fragment>
-                <nav className="navbar-nav bg-dark">
-                    <ul className="nav-pills">
+                <nav className="navbar-nav bg-dark navbar-fixed-top nav-fill">
+                    <ul className=" nav nav-pills">
                         <li className="nav-item">
                             {sessionStorage.getItem("credentials") === null ? (
                                 <Link
@@ -24,7 +24,7 @@ class NavBar extends Component {
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/">
-                                Home
+                                My Profile
 						</Link>
                         </li>
                         <li className="nav-item">
