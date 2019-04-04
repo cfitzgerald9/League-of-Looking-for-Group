@@ -35,7 +35,8 @@ export default {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(fixedUser)
-    }).then(data => data.json());
+    }).then(data => data.json())
+    .then(this.getAllUsers)
   },
     getAllPurposes() {
       return fetch(`http://localhost:5002/purposes`)

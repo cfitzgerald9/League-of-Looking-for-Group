@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import UserAPIManager from '../../modules/UserAPIManager'
 import RiotAPIManager from '../../modules/RiotAPIManager'
 import RiotConfig from '../../modules/RiotConfig'
+import './AuthStyling.css'
 export default class Register extends Component {
     state = {
         email: "",

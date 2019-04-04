@@ -4,9 +4,11 @@ import ProfileComponent from './profile/ProfileComponent';
 import FriendComponent from './friends/FriendComponent';
 import ChatComponent from './chat/ChatComponent'
 import SearchComponent from './search/SearchComponent'
+import ProfileEditComponent from './profile/ProfileEditComponent'
 import Register from './auth/Register';
 import Login from './auth/Login'
 import UserAPIManager from '../modules/UserAPIManager'
+import ChatAPIManager from '../modules/ChatAPIManager';
 
 
 
@@ -61,6 +63,8 @@ export default class ApplicationViews extends Component {
             .then(users => (newState.users = users))
             .then(UserAPIManager.getAllPurposes)
             .then(purposes => (newState.purposes = purposes))
+            .then(ChatAPIManager.getUserMessages)
+            .then(messages => newState.messages = messages)
             .then(() => this.setState(newState));
     }
     render() {
@@ -90,6 +94,20 @@ export default class ApplicationViews extends Component {
                             return <ProfileComponent {...props}
                                 users={this.state.users}
                                 purposes={this.state.purposes} />
+                        } else {
+                            return <Redirect to="/login" />;
+                        }
+                    }
+                    } />
+                    <Route
+                    exact
+                    path="/update"
+                    render={(props) => {
+                        if (this.isAuthenticated()) {
+                            return <ProfileEditComponent {...props}
+                                users={this.state.users}
+                                purposes={this.state.purposes}
+                                refreshUsers={this.refreshUsers}/>
                         } else {
                             return <Redirect to="/login" />;
                         }

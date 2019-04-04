@@ -6,13 +6,14 @@
       "password": "password",
       "purposeId": 4,
       "summonerName": "meshaisataco",
-      "bio": "im a cool dude",
+      "bio": "I'm looking for people to play normal draft with until I gitgud and can play ranked",
       "champs": "yasuo, lee sin, hecarim",
       "summonerId": "iVQQ5Fz7bdWkite5sJsP-jeUpd2wrlfdd1X1cUqzHsYpTzM",
       "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
       "rank": "II",
       "tier": "SILVER",
-      "id": 1
+      "id": 1,
+      "userId": "1"
     },
     {
       "username": "metchu",
@@ -43,13 +44,13 @@
       "id": 3
     },
     {
-      "username": "jock",
+      "username": "JakeTheSnake",
       "email": "jake@gmail.com",
       "password": "j",
       "purposeId": 6,
       "summonerName": "jakiepoooh",
-      "bio": "climb into the backpack",
-      "champs": "zyra, nautilus",
+      "bio": "i'm a super cool guy btw also hi",
+      "champs": "zyra, nautilus, teemo",
       "summonerId": "a3P1wHaIBigRxapOgjdu7DNhKlIqhpkkiiBjS9CdsL6Hjzw",
       "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
       "rank": "II",
@@ -91,6 +92,36 @@
       "text": "hai",
       "userId": "5",
       "id": 4
+    },
+    {
+      "text": "hey",
+      "userId": "1",
+      "id": 5
+    },
+    {
+      "message": "tryin new st00fz",
+      "userId": "1",
+      "id": 6
+    },
+    {
+      "message": "tryin new st00fz",
+      "userId": "1",
+      "id": 7
+    },
+    {
+      "text": "tryin new st00fz",
+      "userId": "1",
+      "id": 8
+    },
+    {
+      "text": "hey",
+      "userId": "4",
+      "id": 9
+    },
+    {
+      "text": "lel",
+      "userId": "4",
+      "id": 10
     }
   ],
   "friends": [],

@@ -29,4 +29,16 @@ label{
     margin-left: 3.5rem;
     padding-top:.5rem
 }
+.registrationForm{
+    display: flex;
+    align-content: center;
+    flex-flow: column wrap;
+    text-align: center;
+    border: 2px solid #00bc8c;
+    margin-top:4rem;
+    padding-bottom: 1rem;
+    width: 25%;
+    margin-left: 35vw
+}
+
 

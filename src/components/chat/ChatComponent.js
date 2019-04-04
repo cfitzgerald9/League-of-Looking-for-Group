@@ -6,6 +6,11 @@ export default class ChatComponent extends Component {
 		userId: sessionStorage.getItem('credentials'),
 		text: ''
 	};
+	scrollToBottom = () => {
+		const chatDiv = document.getElementById('chatMessages');
+		chatDiv.scrollTop = chatDiv.scrollHeight;
+	};
+
 	handleFieldChange = (e) => {
 		const stateToChange = {};
 		stateToChange[e.target.id] = e.target.value;
@@ -13,12 +18,16 @@ export default class ChatComponent extends Component {
 	};
 	sendMessage = (e) => {
 		e.preventDefault();
-		const messageToAdd = {
+		const item = {
 			text: this.state.message,
 			userId: this.state.userId
 		};
-		this.props.addMessage(messageToAdd).then(() => this.props.history.push(`/messages`));
+		this.props.addMessage(item).then(() => this.props.history.push(`/messages`));
 	};
+	componentDidMount() {
+		const chatDiv = document.getElementById('chatMessages');
+		chatDiv.scrollTop = chatDiv.scrollHeight;
+	}
 	render() {
 		return (
 			<React.Fragment>
@@ -32,10 +41,10 @@ export default class ChatComponent extends Component {
 						<input
 							type="text"
 							id="message"
-							placeholder="waddup"
+							placeholder="Say hey!"
 							onChange={this.handleFieldChange}
 						/>
-						<button type="submit" onClick={this.sendMessage} className="btn size1button">
+						<button type="submit" onClick={this.sendMessage} className="btn btn-success size1button" >
 							Submit
 						</button>
 					</form>
