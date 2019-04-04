@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import RiotAPIManager from '../../modules/RiotAPIManager'
 import RiotConfig from '../../modules/RiotConfig'
+import "./SearchStyling.css"
 
 
 export default class SearchComponent extends Component {
@@ -10,7 +11,7 @@ export default class SearchComponent extends Component {
 
       filterUsers = evt => {
         const matchingUsers = this.props.users.filter(
-          user =>{console.log(user, evt.target.value)
+          user =>{
               return user.purposeId === parseInt(evt.target.value)}
         );
         this.setState({ usersToPrint: matchingUsers })
@@ -35,7 +36,8 @@ export default class SearchComponent extends Component {
               <div className="card-body">
                   <p>Nickname: {user.username}</p>
                   <p>In-game: {user.summonerName}</p>
-                  <p>Id: {RiotAPIManager.getByName(user.summonerName, RiotConfig.apiKey).id} </p>
+                  <p>Rank: {RiotAPIManager.getById(user.summonerId, RiotConfig.apiKey).tier} </p>
+                  <img src= {user.pic} alt="userpic" className="searchIcon"></img>
                   <button>Add Friend</button>
               </div>
             </div>

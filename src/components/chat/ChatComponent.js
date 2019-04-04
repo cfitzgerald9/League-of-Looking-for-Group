@@ -4,14 +4,14 @@ import MessageComponent from './MessageComponent';
 export default class ChatComponent extends Component {
 	state = {
 		userId: sessionStorage.getItem('credentials'),
-		message: ''
+		text: ''
 	};
 	handleFieldChange = (e) => {
 		const stateToChange = {};
 		stateToChange[e.target.id] = e.target.value;
 		this.setState(stateToChange);
 	};
-	Message = (e) => {
+	sendMessage = (e) => {
 		e.preventDefault();
 		const messageToAdd = {
 			text: this.state.message,
@@ -22,20 +22,20 @@ export default class ChatComponent extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<div className="chat-messages" id="chat-messages" key={this.state.userId}>
+				<div className="chatMessages" id="chatMessages" key={this.state.userId}>
 					{this.props.messages.map((message) => {
 						return <MessageComponent {...this.props} message={message}/>;
 					})}
 				</div>
-				<div className="chat-input">
+				<div className="chatInput">
 					<form className="form-control chat">
 						<input
 							type="text"
 							id="message"
-							placeholder="Be nice!"
+							placeholder="waddup"
 							onChange={this.handleFieldChange}
 						/>
-						<button type="submit" onClick={this.Message} className="btn size1button">
+						<button type="submit" onClick={this.sendMessage} className="btn size1button">
 							Submit
 						</button>
 					</form>

@@ -28,6 +28,15 @@ export default {
       body: JSON.stringify(editedUser)
     }).then(data => data.json());
   },
+  patchUser(id, fixedUser) {
+    return fetch(`http://localhost:5002/users/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(fixedUser)
+    }).then(data => data.json());
+  },
     getAllPurposes() {
       return fetch(`http://localhost:5002/purposes`)
       .then(e => e.json())
