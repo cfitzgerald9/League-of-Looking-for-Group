@@ -3,42 +3,74 @@
     {
       "username": "virbello",
       "email": "connor@gmail.com",
-      "password": "p",
-      "purposeId": 2,
+      "password": "password",
+      "purposeId": 4,
       "summonerName": "meshaisataco",
       "bio": "im a cool dude",
       "champs": "yasuo, lee sin, hecarim",
       "summonerId": "iVQQ5Fz7bdWkite5sJsP-jeUpd2wrlfdd1X1cUqzHsYpTzM",
       "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
+      "rank": "II",
+      "tier": "SILVER",
       "id": 1
     },
     {
       "username": "metchu",
-      "email": "mett@mett.com",
+      "email": "matt@gmail.com",
       "password": "m",
-      "purposeId": 1,
+      "purposeId": 2,
       "summonerName": "lilmonkk",
-      "bio": "im a cool dude 2",
-      "champs": "vayne, taliyah",
+      "bio": "i'm an adc main and i hate my life",
+      "champs": "vayne",
       "summonerId": "6BXoKFituUyaBZAsmz7J0RgtOPyEwB46ti_0lSP_8LBq",
-      "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
+      "pic": "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081",
+      "rank": "III",
+      "tier": "GOLD",
       "id": 2
+    },
+    {
+      "username": "bobby",
+      "email": "bobby@gmail.com",
+      "password": "b",
+      "purposeId": 3,
+      "summonerName": "Magus Tierus",
+      "bio": "i'm cool",
+      "champs": "Caitlyn",
+      "summonerId": "YIE11cwzvzU0hY5r-sib3maqrI6WIhT_e4X2a5-l9mTpM3c",
+      "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
+      "rank": "III",
+      "tier": "BRONZE",
+      "id": 3
+    },
+    {
+      "username": "jock",
+      "email": "jake@gmail.com",
+      "password": "j",
+      "purposeId": 6,
+      "summonerName": "jakiepoooh",
+      "bio": "climb into the backpack",
+      "champs": "zyra, nautilus",
+      "summonerId": "a3P1wHaIBigRxapOgjdu7DNhKlIqhpkkiiBjS9CdsL6Hjzw",
+      "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
+      "rank": "II",
+      "tier": "SILVER",
+      "id": 4
     }
   ],
   "messages": [
     {
-      "text": "blarg",
-      "userId": "2",
+      "text": "test",
+      "userId": "1",
       "id": 1
     },
     {
       "text": "hey",
-      "userId": "1",
+      "userId": "2",
       "id": 2
     },
     {
-      "text": "blarg",
-      "userId": "1",
+      "text": "what's up",
+      "userId": "3",
       "id": 3
     }
   ],

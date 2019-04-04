@@ -6,6 +6,5 @@ export default{
       getById(summonerId, apiKey) {
         return fetch(`http://localhost:6060/api/league/v4/positions/by-summoner/${summonerId}?api_key=${apiKey}`, {
         }).then(data => data.json())
-        .then(response => console.log(response[0].tier, response[0].rank))
       }
     }

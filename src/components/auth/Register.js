@@ -27,12 +27,16 @@ export default class Register extends Component {
             bio: this.state.userBio,
             champs: this.state.userChamps,
             summonerId: "",
-            pic: this.state.userPic
+            pic: this.state.userPic,
+            rank: "",
+            tier: ""
 
         }
         UserAPIManager.getByEmail(this.state.email).then(user => {
-            this.props.registerUser(userToPost).then(user => {
+            this.props.registerUser(userToPost)
+            .then(user => {
                 RiotAPIManager.getByName(user.summonerName, RiotConfig.apiKey)
+                .then(response => RiotAPIManager.getById(response.id, RiotConfig.apiKey))
                     .then(response => {const userToPatch = {
                                         username: this.state.userName,
                                         email: this.state.userEmail,
@@ -41,7 +45,9 @@ export default class Register extends Component {
                                         summonerName: this.state.userSummonerName,
                                         bio: this.state.userBio,
                                         champs: this.state.userChamps,
-                                        summonerId: response.id,
+                                        summonerId: response[0].summonerId,
+                                        rank: response[0].rank,
+                                        tier: response[0].tier,
                                         pic: this.state.userPic}
                     UserAPIManager.patchUser(user.id, userToPatch)})
                 sessionStorage.setItem("credentials", JSON.stringify(user.id));
@@ -50,23 +56,6 @@ export default class Register extends Component {
             })
         })
     }
-    // componentDidMount() {
-    //     UserAPIManager.getByEmail(this.state.email).then(user => {
-    //         RiotAPIManager.getByName(user.summonerName, RiotConfig.apiKey)
-    //         .then(response => {
-    //             this.setState({
-    //                 username: this.state.userName,
-    //                 email: this.state.userEmail,
-    //                 password: this.state.userPassword,
-    //                 purposeId: parseInt(this.state.userPurposeId),
-    //                 summonerName: this.state.userSummonerName,
-    //                 bio: this.state.userBio,
-    //                 champs: this.state.userChamps,
-    //                 summonerId: response.id,
-    //                 pic: this.state.userPic
-    //             });
-    //         });
-    //     })}
 
 
     render() {
