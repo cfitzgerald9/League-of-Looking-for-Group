@@ -88,7 +88,8 @@ export default class ApplicationViews extends Component {
                     render={(props) => {
                         if (this.isAuthenticated()) {
                             return <ProfileComponent {...props}
-                                users={this.state.users} />
+                                users={this.state.users}
+                                purposes={this.state.purposes} />
                         } else {
                             return <Redirect to="/login" />;
                         }

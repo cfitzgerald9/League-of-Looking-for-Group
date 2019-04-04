@@ -55,6 +55,20 @@
       "rank": "II",
       "tier": "SILVER",
       "id": 4
+    },
+    {
+      "username": "gabeywabey",
+      "email": "gabe@gmail.com",
+      "password": "g",
+      "purposeId": 5,
+      "summonerName": "gabethebabe6",
+      "bio": "im just tryna learn to jungle",
+      "champs": "nunu",
+      "summonerId": "p77tzZsJ9xsJB00NtzPcXu_vyeUoKxdHIyqgTAylI-Jmh6Y",
+      "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
+      "rank": "I",
+      "tier": "BRONZE",
+      "id": 5
     }
   ],
   "messages": [
@@ -72,6 +86,11 @@
       "text": "what's up",
       "userId": "3",
       "id": 3
+    },
+    {
+      "text": "hai",
+      "userId": "5",
+      "id": 4
     }
   ],
   "friends": [],

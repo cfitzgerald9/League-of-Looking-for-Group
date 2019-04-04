@@ -35,7 +35,6 @@ export default class SearchComponent extends Component {
             <div key={user.id} className="card">
               <div className="card-body">
                   <p>Nickname: {user.username}</p>
-                  <p>In-game: {user.summonerName}</p>
                   <p>Rank: {user.tier} {user.rank} </p>
                   <p>Plays: {user.champs}</p>
                   <img src= {user.pic} alt="userpic" className="searchIcon"></img>
