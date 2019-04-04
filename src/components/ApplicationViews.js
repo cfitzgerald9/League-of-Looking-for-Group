@@ -7,7 +7,7 @@ import SearchComponent from './search/SearchComponent'
 import Register from './auth/Register';
 import Login from './auth/Login'
 import UserAPIManager from '../modules/UserAPIManager'
-import ChatAPIManager from '../modules/ChatAPIManager'
+
 
 
 export default class ApplicationViews extends Component {

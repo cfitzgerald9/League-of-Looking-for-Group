@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import RiotAPIManager from '../../modules/RiotAPIManager'
-import RiotConfig from '../../modules/RiotConfig'
 import "./SearchStyling.css"
 
 
@@ -20,6 +18,7 @@ export default class SearchComponent extends Component {
         const usersToPrint = this.state.usersToPrint.length > 0 ? this.state.usersToPrint : this.props.users;
 		return (
             <React.Fragment>
+              <div className="searchHeading">
         <h1>Make friends</h1>
         <select onClick={this.filterUsers}>
           {this.props.purposes.map(onePurpose => {
@@ -30,14 +29,15 @@ export default class SearchComponent extends Component {
             );
           })}
         </select>
+        </div>
         <section className="foundUsers">
           {usersToPrint.map(user => (
             <div key={user.id} className="card">
               <div className="card-body">
+              <img src= {user.pic} alt="userpic" className="searchIcon"></img>
                   <p>Nickname: {user.username}</p>
                   <p>Rank: {user.tier} {user.rank} </p>
                   <p>Plays: {user.champs}</p>
-                  <img src= {user.pic} alt="userpic" className="searchIcon"></img>
                   <button>Add Friend</button>
               </div>
             </div>
