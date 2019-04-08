@@ -7,7 +7,7 @@
       "purposeId": 4,
       "summonerName": "meshaisataco",
       "bio": "I'm looking for people to play normal draft with until I gitgud and can play ranked",
-      "champs": "yasuo, lee sin, hecarim",
+      "champs": "yasuo, lee sin, hecarim, rammus",
       "summonerId": "iVQQ5Fz7bdWkite5sJsP-jeUpd2wrlfdd1X1cUqzHsYpTzM",
       "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
       "rank": "II",
@@ -28,20 +28,6 @@
       "rank": "III",
       "tier": "GOLD",
       "id": 2
-    },
-    {
-      "username": "bobby",
-      "email": "bobby@gmail.com",
-      "password": "b",
-      "purposeId": 3,
-      "summonerName": "Magus Tierus",
-      "bio": "i'm cool",
-      "champs": "Caitlyn",
-      "summonerId": "YIE11cwzvzU0hY5r-sib3maqrI6WIhT_e4X2a5-l9mTpM3c",
-      "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
-      "rank": "III",
-      "tier": "BRONZE",
-      "id": 3
     },
     {
       "username": "JakeTheSnake",
@@ -72,18 +58,32 @@
       "id": 5
     },
     {
-      "username": "rian",
+      "username": "mesha",
       "email": "q@q.com",
       "password": "q",
-      "purposeId": 1,
-      "summonerName": "themagickingdom2",
-      "bio": "im a cool dude 4",
-      "champs": "yasuo, lee sin, hecarim",
-      "summonerId": "",
+      "purposeId": 5,
+      "summonerName": "meshaisataco",
+      "bio": "p",
+      "champs": "sdjfdsakj",
+      "summonerId": "iVQQ5Fz7bdWkite5sJsP-jeUpd2wrlfdd1X1cUqzHsYpTzM",
       "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
-      "rank": "",
-      "tier": "",
+      "rank": "II",
+      "tier": "SILVER",
       "id": 6
+    },
+    {
+      "username": "Magus Tierus",
+      "email": "bobby@gmail.com",
+      "password": "b",
+      "purposeId": 2,
+      "summonerName": "Magus Tierus",
+      "bio": "im a cool dude 4",
+      "champs": "Caitlyn, Vayne",
+      "summonerId": "YIE11cwzvzU0hY5r-sib3maqrI6WIhT_e4X2a5-l9mTpM3c",
+      "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
+      "rank": "III",
+      "tier": "GOLD",
+      "id": 7
     }
   ],
   "messages": [
@@ -98,11 +98,6 @@
       "id": 2
     },
     {
-      "text": "what's up",
-      "userId": "3",
-      "id": 3
-    },
-    {
       "text": "hai",
       "userId": "5",
       "id": 4
@@ -111,16 +106,6 @@
       "text": "hey",
       "userId": "1",
       "id": 5
-    },
-    {
-      "message": "tryin new st00fz",
-      "userId": "1",
-      "id": 6
-    },
-    {
-      "message": "tryin new st00fz",
-      "userId": "1",
-      "id": 7
     },
     {
       "text": "tryin new st00fz",
@@ -138,18 +123,13 @@
       "id": 10
     },
     {
-      "text": "wee",
-      "userId": "6",
-      "id": 11
-    },
-    {
       "text": "hey",
       "userId": "1",
       "id": 12
     },
     {
-      "text": "tryin new st00fz",
-      "userId": "6",
+      "text": "test",
+      "userId": "1",
       "id": 13
     }
   ],
@@ -160,9 +140,24 @@
       "id": 1
     },
     {
-      "firstUserId": 2,
+      "firstUserId": 1,
       "secondUserId": 5,
-      "id": 2
+      "id": 3
+    },
+    {
+      "firstUserId": 6,
+      "secondUserId": 2,
+      "id": 4
+    },
+    {
+      "firstUserId": 7,
+      "secondUserId": 1,
+      "id": 8
+    },
+    {
+      "firstUserId": 1,
+      "secondUserId": 6,
+      "id": 9
     }
   ],
   "purposes": [

@@ -58,6 +58,9 @@ export default class ApplicationViews extends Component {
                 })
             );
     };
+    findFriend = (name) => {
+		return FriendsAPIManager.getFriendName(name);
+	};
       addFriend = (friendObject) => {
         return FriendsAPIManager.addFriend(friendObject)
           .then(FriendsAPIManager.getAllFriends)
@@ -71,7 +74,6 @@ export default class ApplicationViews extends Component {
           .then(FriendsAPIManager.getAllFriends)
           .then(friends => {
             this.setState({ friends: friends })
-            this.buildFriendArray(friends, this.state.users)
           })
       }
     componentDidMount() {
@@ -140,7 +142,9 @@ export default class ApplicationViews extends Component {
                             return <FriendComponent {...props}
                             users={this.state.users}
                             friends={this.state.friends}
-                            purposes={this.state.purposes}/>
+                            purposes={this.state.purposes}
+                            findFriend={this.findFriend}
+                            deleteFriend={this.deleteFriend}/>
                         } else {
                             return <Redirect to="/login" />;
                         }
