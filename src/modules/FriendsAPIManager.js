@@ -11,6 +11,7 @@ export default {
         },
         body: JSON.stringify(newFriend)
       }).then(data => data.json())
+      .then(console.log(newFriend))
     },
     deleteFriend(id){
         return fetch(`http://localhost:5002/friends/${id}`, {

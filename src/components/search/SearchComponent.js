@@ -4,7 +4,8 @@ import "./SearchStyling.css"
 
 export default class SearchComponent extends Component {
     state = {
-        usersToPrint: []
+        usersToPrint: [],
+        addAFriend: "",
       };
 
       filterUsers = evt => {
@@ -14,6 +15,14 @@ export default class SearchComponent extends Component {
         );
         this.setState({ usersToPrint: matchingUsers })
       };
+      addAFriend = evt => {
+            const returned = {
+              firstUserId: parseInt(sessionStorage.getItem('credentials')),
+              secondUserId: parseInt(evt.target.id)
+              }
+                this.props.addFriend(returned)
+                this.props.history.push("/friends")
+    }
     render() {
         const usersToPrint = this.state.usersToPrint.length > 0 ? this.state.usersToPrint : this.props.users;
 		return (
@@ -38,7 +47,9 @@ export default class SearchComponent extends Component {
                   <p>Nickname: {user.username}</p>
                   <p>Rank: {user.tier} {user.rank} </p>
                   <p>Plays: {user.champs}</p>
-                  <button>Add Friend</button>
+                  <button id={user.id} className="btn btn-add-friend btn-secondary"
+                        onClick={this.addAFriend}
+                  >Add Friend</button>
               </div>
             </div>
           ))}

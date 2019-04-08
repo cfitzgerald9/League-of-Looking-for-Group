@@ -15,6 +15,9 @@ export default {
     getByEmail: email =>
     fetch(`http://localhost:5002/users?email=${email}`)
     .then(e => e.json()),
+    getByUsername: username =>
+    fetch(`http://localhost:5002/users?username=${username}`)
+    .then(e => e.json()),
     getOneUser: id =>
     fetch(`http://localhost:5002/users/${id}`)
     .then(user => user.json()),

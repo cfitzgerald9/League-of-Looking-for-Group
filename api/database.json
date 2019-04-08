@@ -70,6 +70,20 @@
       "rank": "I",
       "tier": "BRONZE",
       "id": 5
+    },
+    {
+      "username": "rian",
+      "email": "q@q.com",
+      "password": "q",
+      "purposeId": 1,
+      "summonerName": "themagickingdom2",
+      "bio": "im a cool dude 4",
+      "champs": "yasuo, lee sin, hecarim",
+      "summonerId": "",
+      "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
+      "rank": "",
+      "tier": "",
+      "id": 6
     }
   ],
   "messages": [
@@ -122,9 +136,35 @@
       "text": "lel",
       "userId": "4",
       "id": 10
+    },
+    {
+      "text": "wee",
+      "userId": "6",
+      "id": 11
+    },
+    {
+      "text": "hey",
+      "userId": "1",
+      "id": 12
+    },
+    {
+      "text": "tryin new st00fz",
+      "userId": "6",
+      "id": 13
     }
   ],
-  "friends": [],
+  "friends": [
+    {
+      "firstUserId": 1,
+      "secondUserId": 2,
+      "id": 1
+    },
+    {
+      "firstUserId": 2,
+      "secondUserId": 5,
+      "id": 2
+    }
+  ],
   "purposes": [
     {
       "type": "ARAMs",

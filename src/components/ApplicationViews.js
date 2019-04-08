@@ -9,6 +9,7 @@ import Register from './auth/Register';
 import Login from './auth/Login'
 import UserAPIManager from '../modules/UserAPIManager'
 import ChatAPIManager from '../modules/ChatAPIManager';
+import FriendsAPIManager from '../modules/FriendsAPIManager'
 
 
 
@@ -57,6 +58,22 @@ export default class ApplicationViews extends Component {
                 })
             );
     };
+      addFriend = (friendObject) => {
+        return FriendsAPIManager.addFriend(friendObject)
+          .then(FriendsAPIManager.getAllFriends)
+          .then(friends => {
+            this.setState({ friends: friends })
+          })
+      }
+
+      deleteFriend = (id) => {
+        return FriendsAPIManager.deleteFriend(id)
+          .then(FriendsAPIManager.getAllFriends)
+          .then(friends => {
+            this.setState({ friends: friends })
+            this.buildFriendArray(friends, this.state.users)
+          })
+      }
     componentDidMount() {
         const newState = {};
         UserAPIManager.getAllUsers()
@@ -65,6 +82,8 @@ export default class ApplicationViews extends Component {
             .then(purposes => (newState.purposes = purposes))
             .then(ChatAPIManager.getUserMessages)
             .then(messages => newState.messages = messages)
+            .then(FriendsAPIManager.getAllFriends)
+            .then(friends => newState.friends = friends)
             .then(() => this.setState(newState));
     }
     render() {
@@ -118,7 +137,10 @@ export default class ApplicationViews extends Component {
                     path="/friends"
                     render={(props) => {
                         if (this.isAuthenticated()) {
-                            return <FriendComponent {...props} />
+                            return <FriendComponent {...props}
+                            users={this.state.users}
+                            friends={this.state.friends}
+                            purposes={this.state.purposes}/>
                         } else {
                             return <Redirect to="/login" />;
                         }
@@ -145,7 +167,8 @@ export default class ApplicationViews extends Component {
                         if (this.isAuthenticated()) {
                             return <SearchComponent {...props}
                                 users={this.state.users}
-                                purposes={this.state.purposes} />
+                                purposes={this.state.purposes}
+                                addFriend= {this.addFriend} />
                         } else {
                             return <Redirect to="/login" />;
                         }
