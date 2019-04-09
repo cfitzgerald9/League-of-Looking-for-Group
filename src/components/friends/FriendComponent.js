@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './FriendStyling.css'
 
 export default class FriendComponent extends Component {
     state = {
@@ -41,11 +42,12 @@ export default class FriendComponent extends Component {
     render() {
         return (
             <React.Fragment >
-                <article className="wholeProfile">
+                <h1 className="friendsHeader">Friends</h1>
+                <article className="wholeList">
                     {this.state.friendsWithStuff.map(friend => {
-                        return <div key={friend.id} className="profileInfo">
+                        return <div key={friend.id} className="friendInfo">
                             <h3 className="profileSection" key={friend.id}>{friend.username}</h3>
-                            <img src={friend.pic} alt=""></img>
+                            <img src={friend.pic} alt="" className="friendPic"></img>
                             <p className="profileBio">About me: {friend.bio}</p>
                             <p className="profileChamps">I play: {friend.champs}</p>
                             <p className="profileRank">I'm currently ranked: {friend.tier} {friend.rank} </p>

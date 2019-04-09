@@ -143,6 +143,16 @@
       "firstUserId": 6,
       "secondUserId": 2,
       "id": 4
+    },
+    {
+      "firstUserId": 1,
+      "secondUserId": 2,
+      "id": 5
+    },
+    {
+      "firstUserId": 1,
+      "secondUserId": 7,
+      "id": 6
     }
   ],
   "purposes": [

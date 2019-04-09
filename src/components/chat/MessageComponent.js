@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import './ChatStyling.css'
 
 export default class MessageComponent extends Component {
-	
+
 	render() {
 		return (
 			<React.Fragment>

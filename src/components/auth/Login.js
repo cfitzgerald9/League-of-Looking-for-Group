@@ -38,8 +38,10 @@ export default class Login extends Component {
   render(){
         return (
             <React.Fragment>
+
               <div className="loginForm">
-            <form onSubmit={this.handleLogin }>
+              <h1>Welcome to LoLFG</h1>
+            <form onSubmit={this.handleLogin } className>
                 <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
                 <label htmlFor="inputEmail" className="emailLabel">
                     Email address

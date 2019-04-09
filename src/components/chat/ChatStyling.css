@@ -1,0 +1,15 @@
+.chatMessages{
+    border: 2px solid white;
+    height:50vh;
+    width:50vw;
+    margin-top:10vh;
+    align-content: center;
+    background: #00bc8c;
+
+}
+
+.chatInput{
+    border: 2px solid white;
+    width:50vw;
+    align-content: center
+}

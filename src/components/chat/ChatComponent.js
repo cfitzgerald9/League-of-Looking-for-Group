@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MessageComponent from './MessageComponent';
+import './ChatStyling.css'
 
 export default class ChatComponent extends Component {
 	state = {
@@ -31,6 +32,8 @@ export default class ChatComponent extends Component {
 	render() {
 		return (
 			<React.Fragment>
+				<div className="daWholeChat">
+				<h1>Say hey!</h1>
 				<div className="chatMessages" id="chatMessages" key={this.state.userId}>
 					{this.props.messages.map((message) => {
 						return <MessageComponent {...this.props} message={message}/>;
@@ -48,6 +51,7 @@ export default class ChatComponent extends Component {
 							Submit
 						</button>
 					</form>
+				</div>
 				</div>
 			</React.Fragment>
 		);

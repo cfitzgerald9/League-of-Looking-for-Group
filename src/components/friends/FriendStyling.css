@@ -1,0 +1,18 @@
+.wholeList{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.friendInfo{
+    align-content: space-between;
+    margin-top:6%;
+    width:50%;
+    text-align: center
+}
+.friendPic{
+    height: 30%
+}
+.friendsHeader{
+    text-align: center;
+    margin-top:2%
+}
