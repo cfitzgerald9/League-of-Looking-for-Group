@@ -38,7 +38,7 @@ export default class Login extends Component {
   render(){
         return (
             <React.Fragment>
-              <card className="loginForm">
+              <div className="loginForm">
             <form onSubmit={this.handleLogin }>
                 <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
                 <label htmlFor="inputEmail" className="emailLabel">
@@ -62,7 +62,7 @@ export default class Login extends Component {
 <button className= " btn btn-success size1button registerButton"onClick={() => this.props.history.push("/register")}>
 Or register a new account!
 </button>
-</card>
+</div>
 </React.Fragment>
         )
     }

@@ -12,13 +12,9 @@ export default class FriendComponent extends Component {
 
     static getDerivedStateFromProps = (props, state) => {
         const filteredbyUser = props.friends.filter((friend) => friend.firstUserId === parseInt(sessionStorage.getItem('credentials')))
-        console.log(filteredbyUser, "this is filteredbyUser")
         const mappedbyUser = filteredbyUser.map((each) => each.secondUserId)
-        console.log(mappedbyUser, "this is mappedbyUser")
         const filteredbyFriend = props.friends.filter((friend) => friend.secondUserId === parseInt(sessionStorage.getItem('credentials')))
-        console.log(filteredbyFriend, "this is filteredbyFriend")
         const mappedbyFriend = filteredbyFriend.map((each) => each.firstUserId)
-        console.log(mappedbyFriend, "this is mappedbyFriend")
         const friendArray = mappedbyFriend.concat(mappedbyUser)
         console.log(friendArray, "this is friendArray")
         const friendsWithStuff = []
@@ -31,24 +27,32 @@ export default class FriendComponent extends Component {
         return { friendsWithStuff: friendsWithStuff }
     }
     deleteAFriend = evt => {
-        this.props.deleteFriend(evt.target.id)
-        this.props.history.push("/friends")
+        console.log(parseInt(evt.target.id), "this is event id")
+        this.props.friends.map(dude => {
+            console.log(dude, "yo")
+            if (parseInt(evt.target.id) === dude.secondUserId && dude.firstUserId === parseInt(sessionStorage.getItem('credentials')) || parseInt(evt.target.id) === dude.firstUserId && dude.secondUserId === parseInt(sessionStorage.getItem('credentials'))) {
+                console.log(parseInt(dude.id), "do u see me")
+                this.props.deleteFriend(parseInt(dude.id))
+            }
+            this.props.history.push("/friends")
+        }
+        )
     }
-
     render() {
         return (
             <React.Fragment >
                 <article className="wholeProfile">
                     {this.state.friendsWithStuff.map(friend => {
-                        return <div key={friend.id} id={friend.id} className="profileInfo">
+                        return <div key={friend.id} className="profileInfo">
                             <h3 className="profileSection" key={friend.id}>{friend.username}</h3>
                             <img src={friend.pic} alt=""></img>
                             <p className="profileBio">About me: {friend.bio}</p>
                             <p className="profileChamps">I play: {friend.champs}</p>
                             <p className="profileRank">I'm currently ranked: {friend.tier} {friend.rank} </p>
-                            <button onClick={this.props.deleteAFriend}>Delete Friend</button></div>
+                            <button id={friend.id} onClick={this.deleteAFriend}>Delete Me</button> </div>
                     }
                     )}
+
                 </article>
             </React.Fragment>
         )
