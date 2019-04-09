@@ -1,0 +1,22 @@
+.searchIcon{
+    width: 30%
+}
+.card{
+    width: 20%;
+    margin:4rem;
+    text-align: center
+}
+.foundUsers{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly
+}
+.searchHeading{
+    display: flex;
+    margin-left:40%;
+    padding-bottom: 2rem;
+    flex-flow: column wrap;
+    align-content: center;
+    text-align: center;
+    margin-top:2.5rem
+}

@@ -1,145 +1,123 @@
 {
   "users": [
     {
-      "username": "cone",
+      "username": "virbello",
       "email": "connor@gmail.com",
-      "password": "p",
+      "password": "password",
       "purposeId": 4,
       "summonerName": "meshaisataco",
+      "bio": "I'm want  people to play casually with until I feel comfortable jumping back into ranked. Please help.",
+      "champs": "Yasuo, Lee sin, Hecarim",
+      "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
+      "rank": "II",
+      "tier": "SILVER",
       "id": 1
     },
     {
-      "username": "peenix",
-      "email": "q@q.com",
-      "password": "q",
-      "purposeId": 6,
-      "summonerName": "lilbadwitch",
+      "username": "TheProphetAhijta",
+      "email": "ryan@gmail.com",
+      "password": "password",
+      "purposeId": 1,
+      "summonerName": "themagickingdom2",
+      "bio": "I'm looking for friendly people to help me get back into the game after a long hiatus.",
+      "champs": "Annie",
+      "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
+      "rank": "UNRANKED",
+      "tier": "",
       "id": 2
     },
     {
-      "username": "geen",
-      "email": "e@e.com",
-      "password": "e",
-      "purposeId": 6,
-      "summonerName": "steezygene",
+      "username": "metchu",
+      "email": "matt@gmail.com",
+      "password": "password",
+      "purposeId": 2,
+      "summonerName": "lilmonkk",
+      "bio": "I'm an ADC main and like every ADC main I hate my support and my life.",
+      "champs": "Vayne, Sivir",
+      "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
+      "rank": "III",
+      "tier": "GOLD",
       "id": 3
     },
     {
-      "username": "jock",
-      "email": "t@t.com",
-      "password": "t",
-      "purposeId": 6,
-      "summonerName": "jakiepoooh",
+      "username": "Magus Tierus",
+      "email": "bobby@gmail.com",
+      "password": "password",
+      "purposeId": 3,
+      "summonerName": "Magus Tierus",
+      "bio": "I mainly play ranked, but I'm looking for more people to play with competitively.",
+      "champs": "Caitlyn, Vayne",
+      "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
+      "rank": "IV",
+      "tier": "GOLD",
       "id": 4
     },
     {
-      "username": "jirdoon",
-      "email": "lmao@l.com",
-      "password": "l",
-      "purposeId": 3,
-      "summonerName": "etsuacoil",
+      "username": "phoenixFire",
+      "email": "phoenix@gmail.com",
+      "password": "password",
+      "purposeId": 5,
+      "summonerName": "lilbadwitch",
+      "bio": "Lux support is my waifu, and if I have to fill, I play poppy in pretty much all roles.",
+      "champs": "Lux, Poppy",
+      "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
+      "rank": "II",
+      "tier": "SILVER",
       "id": 5
     },
     {
-      "username": "gob",
-      "email": "y@y.com",
-      "password": "y",
+      "username": "JaKetheSnaKe",
+      "email": "jake@gmail.com",
+      "password": "password",
       "purposeId": 6,
-      "summonerName": "gabethebabe6",
+      "summonerName": "jakiepoooh",
+      "bio": "Support lyfe 4 lyfe",
+      "champs": "Alistar, Pyke",
+      "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
+      "rank": "II",
+      "tier": "SILVER",
       "id": 6
-    },
-    {
-      "username": "whale-x",
-      "email": "d@d",
-      "password": "dd",
-      "purposeId": 2,
-      "summonerName": "infamous monarch",
-      "id": 7
-    },
-    {
-      "username": "neek",
-      "email": "hopper4u@bunnytrail.com",
-      "password": "1",
-      "purposeId": 1,
-      "summonerName": "partyfoust",
-      "id": 8
-    },
-    {
-      "username": "metchu",
-      "email": "h@h.com",
-      "password": "1",
-      "purposeId": 5,
-      "summonerName": "lilmonkk",
-      "id": 9
-    },
-    {
-      "username": "bab",
-      "email": "bab@bab.com",
-      "password": "b",
-      "purposeId": 4,
-      "summonerName": "diamonddiabetic",
-      "summonerId": "",
-      "id": 10
-    },
-    {
-      "username": "rien",
-      "email": "y@y.com",
-      "password": "y",
-      "purposeId": 1,
-      "summonerName": "themagickingdom2",
-      "bio": "im a cool dude",
-      "champs": "yasuo",
-      "id": 11
-    },
-    {
-      "username": "geewhizz",
-      "email": "g@g.com",
-      "password": "g",
-      "purposeId": 2,
-      "summonerName": "meshaisataco",
-      "bio": "im a cool dude",
-      "champs": "yasuo",
-      "id": 12
     }
   ],
   "messages": [
     {
-      "text": "blarg",
+      "text": "hey",
       "userId": "1",
-      "id": 13
-    },
-    {
-      "text": "blarg",
-      "userId": "1",
-      "id": 14
-    },
-    {
-      "text": "blarg",
-      "userId": "1",
-      "id": 15
-    },
-    {
-      "text": "haha",
-      "userId": "1",
-      "id": 16
-    },
-    {
-      "text": "testin",
-      "userId": "6",
-      "id": 17
-    },
-    {
-      "text": "testin 2",
-      "userId": "6",
-      "id": 18
-    },
-    {
-      "text": "hmmm",
-      "userId": "1",
-      "id": 19
+      "id": 1
     }
   ],
-  "friends": [],
+  "friends": [
+    {
+      "firstUserId": 6,
+      "secondUserId": 3,
+      "id": 1
+    },
+    {
+      "firstUserId": 6,
+      "secondUserId": 5,
+      "id": 2
+    },
+    {
+      "firstUserId": 6,
+      "secondUserId": 1,
+      "id": 3
+    },
+    {
+      "firstUserId": 1,
+      "secondUserId": 2,
+      "id": 5
+    },
+    {
+      "firstUserId": 1,
+      "secondUserId": 5,
+      "id": 6
+    },
+    {
+      "firstUserId": 1,
+      "secondUserId": 4,
+      "id": 7
+    }
+  ],
   "purposes": [
     {
       "type": "ARAMs",

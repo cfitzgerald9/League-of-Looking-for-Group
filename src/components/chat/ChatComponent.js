@@ -1,44 +1,57 @@
 import React, { Component } from 'react';
 import MessageComponent from './MessageComponent';
+import './ChatStyling.css'
 
 export default class ChatComponent extends Component {
 	state = {
 		userId: sessionStorage.getItem('credentials'),
-		message: ''
+		text: ''
 	};
+	scrollToBottom = () => {
+		const chatDiv = document.getElementById('chatMessages');
+		chatDiv.scrollTop = chatDiv.scrollHeight;
+	};
+
 	handleFieldChange = (e) => {
 		const stateToChange = {};
 		stateToChange[e.target.id] = e.target.value;
 		this.setState(stateToChange);
 	};
-	Message = (e) => {
+	sendMessage = (e) => {
 		e.preventDefault();
-		const messageToAdd = {
+		const item = {
 			text: this.state.message,
 			userId: this.state.userId
 		};
-		this.props.addMessage(messageToAdd).then(() => this.props.history.push(`/messages`));
+		this.props.addMessage(item).then(() => this.props.history.push(`/messages`));
 	};
+	componentDidMount() {
+		const chatDiv = document.getElementById('chatMessages');
+		chatDiv.scrollTop = chatDiv.scrollHeight;
+	}
 	render() {
 		return (
 			<React.Fragment>
-				<div className="chat-messages" id="chat-messages" key={this.state.userId}>
+				<div className="daWholeChat">
+				<h1 className="chatHeading">Group Chat</h1>
+				<div className="chatMessages" id="chatMessages" key={this.state.userId}>
 					{this.props.messages.map((message) => {
 						return <MessageComponent {...this.props} message={message}/>;
 					})}
 				</div>
-				<div className="chat-input">
+				<div className="chatInput">
 					<form className="form-control chat">
 						<input
-							type="text"
+							type="textarea"
 							id="message"
-							placeholder="Be nice!"
+							placeholder="Say hey!"
 							onChange={this.handleFieldChange}
 						/>
-						<button type="submit" onClick={this.Message} className="btn size1button">
+						<button type="submit" onClick={this.sendMessage} className="btn btn-primary" >
 							Submit
 						</button>
 					</form>
+				</div>
 				</div>
 			</React.Fragment>
 		);

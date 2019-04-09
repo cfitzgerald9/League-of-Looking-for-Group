@@ -1,0 +1,25 @@
+.chatMessages{
+    border: 4px inset white;
+    height:50vh;
+    width:50vw;
+    align-content: center;
+    background: #303030;
+
+}
+
+.chatInput{
+    border: 4px inset white;
+    width:50vw;
+    align-content: center
+}
+.daWholeChat{
+    display: flex;
+    flex-flow:column wrap;
+   align-content: center
+}
+.chatHeading{
+    margin-top: 2rem;
+    text-align: center;
+    border: 4px inset white;
+    background: #303030;
+}

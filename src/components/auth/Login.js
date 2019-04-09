@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import UserAPIManager from '../../modules/UserAPIManager'
+import './AuthStyling.css'
 
 export default class Login extends Component {
     state = {
@@ -37,28 +38,30 @@ export default class Login extends Component {
   render(){
         return (
             <React.Fragment>
-            <form onSubmit={this.handleLogin }>
+
+              <div className="card loginForm">
+              <h1>Welcome to LoLFG</h1>
+            <form onSubmit={this.handleLogin } className>
                 <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
-                <label htmlFor="inputEmail">
+                <label htmlFor="inputEmail" className="emailLabel">
                     Email address
                 </label>
                 <input onChange={this.handleFieldChange} type="email"
                        id="email"
                        placeholder="Email address"
                        required="" autoFocus="" />
-                <label htmlFor="inputPassword">
-                    Password
+                <label htmlFor="inputPassword" className="passwordLabel">
+                      Password
                 </label>
                 <input onChange={this.handleFieldChange} type="password"
                        id="password"
                        placeholder="Password"
                        required="" />
-                <button type="submit" >
+                <button type="submit" className="loginButton btn btn-primary size1button" >
                     Sign in
                 </button>
             </form>
-<div>
-<button onClick={() => this.props.history.push("/register")}>
+<button className= " btn btn-primary size1button registerButton"onClick={() => this.props.history.push("/register")}>
 Or register a new account!
 </button>
 </div>

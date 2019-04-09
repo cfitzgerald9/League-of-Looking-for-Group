@@ -1,24 +1,33 @@
 import React, { Component } from 'react';
-import RiotAPIManager from '../../modules/RiotAPIManager'
-import RiotConfig from '../../modules/RiotConfig'
+import "./SearchStyling.css"
 
 
 export default class SearchComponent extends Component {
     state = {
-        usersToPrint: []
+        usersToPrint: [],
+        addAFriend: "",
       };
 
       filterUsers = evt => {
         const matchingUsers = this.props.users.filter(
-          user =>{console.log(user, evt.target.value)
+          user =>{
               return user.purposeId === parseInt(evt.target.value)}
         );
         this.setState({ usersToPrint: matchingUsers })
       };
+      addAFriend = evt => {
+            const returned = {
+              firstUserId: parseInt(sessionStorage.getItem('credentials')),
+              secondUserId: parseInt(evt.target.id)
+              }
+                this.props.addFriend(returned)
+                this.props.history.push("/friends")
+    }
     render() {
         const usersToPrint = this.state.usersToPrint.length > 0 ? this.state.usersToPrint : this.props.users;
 		return (
             <React.Fragment>
+              <div className="searchHeading card">
         <h1>Make friends</h1>
         <select onClick={this.filterUsers}>
           {this.props.purposes.map(onePurpose => {
@@ -29,14 +38,18 @@ export default class SearchComponent extends Component {
             );
           })}
         </select>
+        </div>
         <section className="foundUsers">
           {usersToPrint.map(user => (
             <div key={user.id} className="card">
               <div className="card-body">
+              <img src= {user.pic} alt="userpic" className="searchIcon"></img>
                   <p>Nickname: {user.username}</p>
-                  <p>In-game: {user.summonerName}</p>
-                  <p>Id: {RiotAPIManager.getByName(user.summonerName, RiotConfig.apiKey).id} </p>
-                  <button>Add Friend</button>
+                  <p>Rank: {user.tier} {user.rank} </p>
+                  <p>Plays: {user.champs}</p>
+                  <button id={user.id} className="btn btn-primary"
+                        onClick={this.addAFriend}
+                  >Add Friend</button>
               </div>
             </div>
           ))}

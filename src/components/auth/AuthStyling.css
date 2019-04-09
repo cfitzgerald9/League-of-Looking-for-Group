@@ -1,0 +1,59 @@
+.loginForm{
+    display: flex;
+    align-content: center;
+    flex-flow: column wrap;
+    text-align: center;
+    border: 2px solid white;
+    margin-top:4rem;
+    padding-top:.5rem;
+    padding-bottom: 1rem;
+    width: 25%;
+    margin-left: 35vw;
+}
+.registerButton{
+    width: 150px;
+    margin-top: 2rem;
+    align-self: center;
+    margin-bottom: 2rem;
+    border: 2px inset white  ;
+
+
+}
+.loginButton{
+    display: flex;
+    align-self: center;
+    margin-left:6.3rem;
+    margin-top:2rem;
+    border: 2px inset white;
+    width: 4.9rem;
+    text-align: center
+}
+
+label{
+    display: flex;
+    text-align: center;
+    margin-left: 3.5rem;
+    padding-top:.5rem;
+
+}
+input{
+    border: 4px inset white;
+}
+.registrationForm{
+    display: flex;
+    align-content: center;
+    flex-flow: column wrap;
+    text-align: center;
+    border: 2px solid white;
+    margin-top:4rem;
+    padding-bottom: 1rem;
+    width: 25%;
+    margin-left: 35vw;
+    margin-bottom:3rem;
+    background: #303030;
+}
+.registerUser{
+    margin-top:2rem
+}
+
+
