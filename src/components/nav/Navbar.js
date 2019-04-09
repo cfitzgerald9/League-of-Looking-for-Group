@@ -9,7 +9,7 @@ class NavBar extends Component {
     render() {
         return (
             <React.Fragment>
-                <nav className="navbar-nav bg-dark navbar-fixed-top nav-fill">
+                <nav className="navbar-nav navbar-fixed-top nav-fill bg-primary">
                     <ul className=" nav nav-pills">
                         <li className="nav-item">
                             {sessionStorage.getItem("credentials") === null ? (

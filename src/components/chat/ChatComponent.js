@@ -33,7 +33,7 @@ export default class ChatComponent extends Component {
 		return (
 			<React.Fragment>
 				<div className="daWholeChat">
-				<h1>Say hey!</h1>
+				<h1 className="chatHeading">Group Chat</h1>
 				<div className="chatMessages" id="chatMessages" key={this.state.userId}>
 					{this.props.messages.map((message) => {
 						return <MessageComponent {...this.props} message={message}/>;
@@ -42,12 +42,12 @@ export default class ChatComponent extends Component {
 				<div className="chatInput">
 					<form className="form-control chat">
 						<input
-							type="text"
+							type="textarea"
 							id="message"
 							placeholder="Say hey!"
 							onChange={this.handleFieldChange}
 						/>
-						<button type="submit" onClick={this.sendMessage} className="btn btn-success size1button" >
+						<button type="submit" onClick={this.sendMessage} className="btn btn-primary" >
 							Submit
 						</button>
 					</form>

@@ -4,6 +4,9 @@ body {
   font-family: 'Homenaje', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  background-image: url("http://forums.na.leagueoflegends.com/board/attachment.php?attachmentid=893038");
+  background-repeat: no-repeat
 }
 
 code {

@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import UserAPIManager from "../../modules/UserAPIManager";
+import './ProfileStyling.css'
 
 
 export default class ProfileEditComponent extends Component {
@@ -47,11 +48,12 @@ export default class ProfileEditComponent extends Component {
   render() {
     return (
       <React.Fragment>
-        <form className="">
-          <div className="">
+        <form className="editForm">
+        <h1>Edit your profile</h1>
+          <div className="editBio">
             <label htmlFor="bio">Update bio</label>
-            <input
-              type="text"
+            <textarea
+              type="textarea"
               required
               className=""
               onChange={this.handleFieldChange}
@@ -59,9 +61,9 @@ export default class ProfileEditComponent extends Component {
               value={this.state.newBio}
             />
           </div>
-          <div className="form-group">
+          <div className="editChamps">
             <label htmlFor="champs">Change champion list</label>
-            <input
+            <textarea
               type="text"
               required
               className=""
@@ -70,7 +72,7 @@ export default class ProfileEditComponent extends Component {
               value={this.state.newChamps}
             />
           </div>
-          <div className="">
+          <div className="editPic">
             <label htmlFor="pic">Change picture</label>
             <input
               type="url"
@@ -84,7 +86,7 @@ export default class ProfileEditComponent extends Component {
           <button
             type="submit"
             onClick={this.updateExistingUser}
-            className="btn btn-primary"
+            className="saveEdit"
           >
             Submit
           </button>

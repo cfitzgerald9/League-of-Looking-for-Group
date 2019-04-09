@@ -4,7 +4,6 @@
     flex-flow: column wrap;
     text-align: center;
     border: 2px solid white;
-    background-color:#00bc8c;
     margin-top:4rem;
     padding-top:.5rem;
     padding-bottom: 1rem;
@@ -15,8 +14,9 @@
     width: 150px;
     margin-top: 2rem;
     align-self: center;
-    border: 4px inset #029670  ;
-    background: #029670;
+    margin-bottom: 2rem;
+    border: 2px inset white  ;
+
 
 }
 .loginButton{
@@ -24,8 +24,7 @@
     align-self: center;
     margin-left:6.3rem;
     margin-top:2rem;
-    border: 4px inset #029670;
-    background: #029670;
+    border: 2px inset white;
     width: 4.9rem;
     text-align: center
 }
@@ -38,18 +37,23 @@ label{
 
 }
 input{
-    border: 4px inset #029670;
+    border: 4px inset white;
 }
 .registrationForm{
     display: flex;
     align-content: center;
     flex-flow: column wrap;
     text-align: center;
-    border: 2px solid #00bc8c;
+    border: 2px solid white;
     margin-top:4rem;
     padding-bottom: 1rem;
     width: 25%;
-    margin-left: 35vw
+    margin-left: 35vw;
+    margin-bottom:3rem;
+    background: #303030;
+}
+.registerUser{
+    margin-top:2rem
 }
 
 

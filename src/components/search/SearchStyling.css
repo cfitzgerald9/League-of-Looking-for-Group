@@ -13,6 +13,8 @@
 }
 .searchHeading{
     display: flex;
+    margin-left:40%;
+    padding-bottom: 2rem;
     flex-flow: column wrap;
     align-content: center;
     text-align: center;

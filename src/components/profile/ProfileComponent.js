@@ -17,7 +17,7 @@ export default class ProfileComponent extends Component {
                             <p className="profilePurpose">And I want to play: {this.props.purposes.find(purposeParam => purposeParam.id === user.purposeId).type}</p>
                             <div className="addButton">
                         <button type="button"
-                            className="btn btn-success size1button"
+                            className="btn btn-primary size1button editButton"
                             onClick={() => {
                                 this.props.history.push(`/update`)
                             }}>

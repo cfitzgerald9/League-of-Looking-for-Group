@@ -27,7 +27,7 @@ export default class Register extends Component {
             summonerName: this.state.userSummonerName,
             bio: this.state.userBio,
             champs: this.state.userChamps,
-            summonerId: "",
+            // summonerId: "",
             pic: this.state.userPic,
             rank: "",
             tier: ""
@@ -46,7 +46,7 @@ export default class Register extends Component {
                                         summonerName: this.state.userSummonerName,
                                         bio: this.state.userBio,
                                         champs: this.state.userChamps,
-                                        summonerId: response[0].summonerId,
+                                        // summonerId: response[0].summonerId,
                                         rank: response[0].rank,
                                         tier: response[0].tier,
                                         pic: this.state.userPic}
@@ -94,7 +94,7 @@ export default class Register extends Component {
                         <label htmlFor="inputChamps">
                             What champions do you play?
                 </label>
-                        <input onChange={this.handleFieldChangeUser} type="text"
+                        <textarea onChange={this.handleFieldChangeUser} type="textarea"
                             id="userChamps"
                             placeholder="champs"
                             required="" />
@@ -108,7 +108,7 @@ export default class Register extends Component {
                         <label htmlFor="inputBio">
                             Tell us about yourself!
                 </label>
-                        <input onChange={this.handleFieldChangeUser} type="text"
+                        <textarea onChange={this.handleFieldChangeUser} type="textrea"
                             id="userBio"
                             placeholder="Bio"
                             required="" />
@@ -124,7 +124,7 @@ export default class Register extends Component {
                                 </option>
                             ))}
                         </select>
-                        <button type="submit">
+                        <button type="submit" className="registerUser">
                             Register!
                 </button>
             </form>

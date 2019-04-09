@@ -27,7 +27,7 @@ export default class SearchComponent extends Component {
         const usersToPrint = this.state.usersToPrint.length > 0 ? this.state.usersToPrint : this.props.users;
 		return (
             <React.Fragment>
-              <div className="searchHeading">
+              <div className="searchHeading card">
         <h1>Make friends</h1>
         <select onClick={this.filterUsers}>
           {this.props.purposes.map(onePurpose => {
@@ -47,7 +47,7 @@ export default class SearchComponent extends Component {
                   <p>Nickname: {user.username}</p>
                   <p>Rank: {user.tier} {user.rank} </p>
                   <p>Plays: {user.champs}</p>
-                  <button id={user.id} className="btn btn-add-friend btn-secondary"
+                  <button id={user.id} className="btn btn-primary"
                         onClick={this.addAFriend}
                   >Add Friend</button>
               </div>

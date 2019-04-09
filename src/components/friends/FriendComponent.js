@@ -45,13 +45,13 @@ export default class FriendComponent extends Component {
                 <h1 className="friendsHeader">Friends</h1>
                 <article className="wholeList">
                     {this.state.friendsWithStuff.map(friend => {
-                        return <div key={friend.id} className="friendInfo">
+                        return <div key={friend.id} className="friendInfo card">
                             <h3 className="profileSection" key={friend.id}>{friend.username}</h3>
                             <img src={friend.pic} alt="" className="friendPic"></img>
-                            <p className="profileBio">About me: {friend.bio}</p>
+                            <p className="profileBio">{friend.bio}</p>
                             <p className="profileChamps">I play: {friend.champs}</p>
                             <p className="profileRank">I'm currently ranked: {friend.tier} {friend.rank} </p>
-                            <button id={friend.id} onClick={this.deleteAFriend}>Delete Me</button> </div>
+                            <button id={friend.id} onClick={this.deleteAFriend} className="btn btn-danger btn-sm">Delete Me</button> </div>
                     }
                     )}
 

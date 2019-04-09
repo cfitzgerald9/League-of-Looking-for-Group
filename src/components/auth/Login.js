@@ -39,7 +39,7 @@ export default class Login extends Component {
         return (
             <React.Fragment>
 
-              <div className="loginForm">
+              <div className="card loginForm">
               <h1>Welcome to LoLFG</h1>
             <form onSubmit={this.handleLogin } className>
                 <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
@@ -57,11 +57,11 @@ export default class Login extends Component {
                        id="password"
                        placeholder="Password"
                        required="" />
-                <button type="submit" className="loginButton btn btn-success size1button" >
+                <button type="submit" className="loginButton btn btn-primary size1button" >
                     Sign in
                 </button>
             </form>
-<button className= " btn btn-success size1button registerButton"onClick={() => this.props.history.push("/register")}>
+<button className= " btn btn-primary size1button registerButton"onClick={() => this.props.history.push("/register")}>
 Or register a new account!
 </button>
 </div>
