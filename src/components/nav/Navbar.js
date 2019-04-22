@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import './Navbar.css'
 import 'bootswatch/dist/darkly/bootstrap.min.css';
 
 class NavBar extends Component {
@@ -9,7 +10,7 @@ class NavBar extends Component {
     render() {
         return (
             <React.Fragment>
-                <nav className="navbar-nav navbar-fixed-top nav-fill bg-primary">
+                <nav className="navbar-nav navbar-fixed-top nav-fill bg-primary navigation">
                     <ul className=" nav nav-pills">
                         <li className="nav-item">
                             {sessionStorage.getItem("credentials") === null ? (

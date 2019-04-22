@@ -52,8 +52,9 @@ export default class Register extends Component {
                                         pic: this.state.userPic}
                     UserAPIManager.patchUser(user.id, userToPatch)})
                 sessionStorage.setItem("credentials", JSON.stringify(user.id));
-                this.props.history.push("/");
                 this.props.refreshUsers()
+                this.props.history.push("/");
+
             })
         })
     }

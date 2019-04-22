@@ -41,7 +41,7 @@ export default class SearchComponent extends Component {
         </div>
         <section className="foundUsers">
           {usersToPrint.map(user => (
-            <div key={user.id} className="card">
+            <div key={user.id} className="card userCards">
               <div className="card-body">
               <img src= {user.pic} alt="userpic" className="searchIcon"></img>
                   <p>Nickname: {user.username}</p>

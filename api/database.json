@@ -77,6 +77,19 @@
       "rank": "II",
       "tier": "SILVER",
       "id": 6
+    },
+    {
+      "username": "bobert",
+      "email": "rickybobby@gmail.com",
+      "password": "password",
+      "purposeId": 5,
+      "summonerName": "diamonddiabetic",
+      "bio": "haha i hate everything but chicfila",
+      "champs": "jhin, ashe",
+      "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
+      "rank": "I",
+      "tier": "IRON",
+      "id": 16
     }
   ],
   "messages": [
@@ -84,6 +97,11 @@
       "text": "hey",
       "userId": "1",
       "id": 1
+    },
+    {
+      "text": "hey bud",
+      "userId": "16",
+      "id": 2
     }
   ],
   "friends": [
@@ -116,6 +134,16 @@
       "firstUserId": 1,
       "secondUserId": 4,
       "id": 7
+    },
+    {
+      "firstUserId": 16,
+      "secondUserId": 3,
+      "id": 8
+    },
+    {
+      "firstUserId": 16,
+      "secondUserId": 2,
+      "id": 9
     }
   ],
   "purposes": [
