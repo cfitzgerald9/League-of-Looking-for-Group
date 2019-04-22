@@ -6,7 +6,7 @@
       "password": "password",
       "purposeId": 4,
       "summonerName": "meshaisataco",
-      "bio": "I'm want  people to play casually with until I feel comfortable jumping back into ranked. Please help.",
+      "bio": "I want  people to play casually with until I feel comfortable jumping back into ranked. Please help.",
       "champs": "Yasuo, Lee sin, Hecarim",
       "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
       "rank": "II",
@@ -102,6 +102,11 @@
       "text": "hey bud",
       "userId": "16",
       "id": 2
+    },
+    {
+      "text": "what're you up to",
+      "userId": "1",
+      "id": 3
     }
   ],
   "friends": [

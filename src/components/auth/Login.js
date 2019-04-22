@@ -5,7 +5,8 @@ import './AuthStyling.css'
 export default class Login extends Component {
     state = {
         email: "",
-        password: ""
+        password: "",
+        isLoggedin: ""
     }
     handleFieldChange = (evt) => {
         const stateToChange = {}
@@ -23,11 +24,13 @@ export default class Login extends Component {
             this.setState({ errorMessage: errorMessage });
           } else {
             if (user[0].password === this.state.password) {
+              this.setState({isLoggedin : true})
         sessionStorage.setItem(
                     "credentials",
                     JSON.stringify(user[0].id)
                   );
               this.props.history.push("/");
+
             } else {
               errorMessage = "Your password was incorrect. Please try again.";
               this.setState({ errorMessage: errorMessage });

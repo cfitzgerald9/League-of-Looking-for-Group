@@ -8,7 +8,7 @@ export default class LoLFG extends Component {
   render() {
     return (
       <React.Fragment>
-        <Navbar />
+        <Navbar/>
         <ApplicationViews />
       </React.Fragment>
     );

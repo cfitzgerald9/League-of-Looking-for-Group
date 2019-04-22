@@ -4,8 +4,12 @@ import './Navbar.css'
 import 'bootswatch/dist/darkly/bootstrap.min.css';
 
 class NavBar extends Component {
+    state = {
+        isLoggedIn: ""
+    }
     logout = () => {
         sessionStorage.removeItem('credentials');
+        this.props.history.replace("/")
     };
     render() {
         return (
@@ -13,15 +17,15 @@ class NavBar extends Component {
                 <nav className="navbar-nav navbar-fixed-top nav-fill bg-primary navigation">
                     <ul className=" nav nav-pills">
                         <li className="nav-item">
-                            {sessionStorage.getItem("credentials") === null ? (
-                                <Link
-                                className="nav-link" to="/login">
-                                Sign In </Link>
-                            ) : (
+                            {sessionStorage.getItem("credentials") !== null ? (
                                 <Link className="nav-link"
                                 to="/" onClick={this.logout}>
                                 Sign Out</Link>
-                                )}
+                                ) : (
+                                <Link
+                                className="nav-link" to="/login">
+                                Sign In </Link>
+                            ) }
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/">
