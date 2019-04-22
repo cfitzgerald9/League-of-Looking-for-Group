@@ -15,6 +15,9 @@
 .friendPic{
     height: 40%
 }
+.deleteButton{
+    font-size: 14pt
+}
 .friendsHeader{
     text-align: center;
     margin-top:2%;

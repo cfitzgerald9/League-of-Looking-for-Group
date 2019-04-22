@@ -51,7 +51,7 @@ export default class FriendComponent extends Component {
                             <p className="profileBio">{friend.bio}</p>
                             <p className="profileChamps">I play: {friend.champs}</p>
                             <p className="profileRank">I'm currently ranked: {friend.tier} {friend.rank} </p>
-                            <button id={friend.id} onClick={this.deleteAFriend} className="btn btn-danger btn-sm">Delete Me</button> </div>
+                            <button id={friend.id} onClick={this.deleteAFriend} className="btn btn-danger btn-sm deleteButton">Delete Me</button> </div>
                     }
                     )}
 

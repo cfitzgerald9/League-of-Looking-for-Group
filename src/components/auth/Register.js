@@ -113,7 +113,7 @@ export default class Register extends Component {
                             id="userBio"
                             placeholder="Bio"
                             required="" />
-                        <label htmlFor="purpose">What are you interested in?</label>
+                        <label htmlFor="purpose">What queue do you want to play?</label>
                         <select onChange={this.handleFieldChangeUser}
                             name="purpose"
                             id="userPurposeId"
@@ -125,7 +125,7 @@ export default class Register extends Component {
                                 </option>
                             ))}
                         </select>
-                        <button type="submit" className="registerUser">
+                        <button type="submit" className="registerUser btn btn-primary size1button">
                             Register!
                 </button>
             </form>
