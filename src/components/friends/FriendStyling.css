@@ -2,17 +2,22 @@
     display: flex;
     flex-flow: row wrap;
     margin-left:13%;
-    margin-right:10%
+    margin-right:10%;
+    font-size: 16pt
 }
 
 .friendInfo{
     display: flex;
-    height: 60vh;
+    height: 90vh;
     align-content: space-evenly;
     text-align: center
 }
 .friendPic{
-    height: 50%
+    height: 40%
+}
+.deleteButton{
+    font-size: 14pt;
+    margin-top:auto
 }
 .friendsHeader{
     text-align: center;

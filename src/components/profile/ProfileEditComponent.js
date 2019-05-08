@@ -86,7 +86,7 @@ export default class ProfileEditComponent extends Component {
           <button
             type="submit"
             onClick={this.updateExistingUser}
-            className="saveEdit"
+            className="saveEdit btn btn-primary size1button"
           >
             Submit
           </button>

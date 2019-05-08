@@ -1,20 +1,21 @@
 .loginForm{
     display: flex;
-    align-content: center;
-    flex-flow: column wrap;
-    text-align: center;
+    align-items: center;
     border: 2px solid white;
     margin-top:4rem;
     padding-top:.5rem;
     padding-bottom: 1rem;
     width: 25%;
     margin-left: 35vw;
+    font-size:14pt
 }
+
 .registerButton{
     width: 150px;
     margin-top: 2rem;
     align-self: center;
     margin-bottom: 2rem;
+    font-size:14pt;
     border: 2px inset white  ;
 
 
@@ -22,17 +23,18 @@
 .loginButton{
     display: flex;
     align-self: center;
-    margin-left:6.3rem;
+    margin-left:2.5rem;
     margin-top:2rem;
     border: 2px inset white;
     width: 4.9rem;
+    font-size:14pt;
     text-align: center
 }
 
 label{
     display: flex;
     text-align: center;
-    margin-left: 3.5rem;
+
     padding-top:.5rem;
 
 }
@@ -51,6 +53,7 @@ input{
     margin-left: 35vw;
     margin-bottom:3rem;
     background: #303030;
+    font-size:14pt
 }
 .registerUser{
     margin-top:2rem

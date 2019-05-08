@@ -5,7 +5,7 @@ import './AuthStyling.css'
 export default class Login extends Component {
     state = {
         email: "",
-        password: ""
+        password: "",
     }
     handleFieldChange = (evt) => {
         const stateToChange = {}
@@ -28,10 +28,12 @@ export default class Login extends Component {
                     JSON.stringify(user[0].id)
                   );
               this.props.history.push("/");
+
             } else {
               errorMessage = "Your password was incorrect. Please try again.";
               this.setState({ errorMessage: errorMessage });
             }
+            window.location.reload();
           }
         });
       };

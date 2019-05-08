@@ -52,8 +52,10 @@ export default class Register extends Component {
                                         pic: this.state.userPic}
                     UserAPIManager.patchUser(user.id, userToPatch)})
                 sessionStorage.setItem("credentials", JSON.stringify(user.id));
-                this.props.history.push("/");
                 this.props.refreshUsers()
+                this.props.history.push("/");
+                window.location.reload();
+
             })
         })
     }
@@ -112,7 +114,7 @@ export default class Register extends Component {
                             id="userBio"
                             placeholder="Bio"
                             required="" />
-                        <label htmlFor="purpose">What are you interested in?</label>
+                        <label htmlFor="purpose">What queue do you want to play?</label>
                         <select onChange={this.handleFieldChangeUser}
                             name="purpose"
                             id="userPurposeId"
@@ -124,7 +126,7 @@ export default class Register extends Component {
                                 </option>
                             ))}
                         </select>
-                        <button type="submit" className="registerUser">
+                        <button type="submit" className="registerUser btn btn-primary size1button">
                             Register!
                 </button>
             </form>

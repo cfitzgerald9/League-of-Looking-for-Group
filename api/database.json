@@ -1,19 +1,6 @@
 {
   "users": [
     {
-      "username": "virbello",
-      "email": "connor@gmail.com",
-      "password": "password",
-      "purposeId": 4,
-      "summonerName": "meshaisataco",
-      "bio": "I'm want  people to play casually with until I feel comfortable jumping back into ranked. Please help.",
-      "champs": "Yasuo, Lee sin, Hecarim",
-      "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
-      "rank": "II",
-      "tier": "SILVER",
-      "id": 1
-    },
-    {
       "username": "TheProphetAhijta",
       "email": "ryan@gmail.com",
       "password": "password",
@@ -71,51 +58,85 @@
       "password": "password",
       "purposeId": 6,
       "summonerName": "jakiepoooh",
-      "bio": "Support lyfe 4 lyfe",
+      "bio": "I only play support, don't put me in another lane please",
       "champs": "Alistar, Pyke",
       "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
       "rank": "II",
       "tier": "SILVER",
       "id": 6
+    },
+    {
+      "username": "bobert",
+      "email": "rickybobby@gmail.com",
+      "password": "password",
+      "purposeId": 5,
+      "summonerName": "diamonddiabetic",
+      "bio": "haha i hate everything but chicfila",
+      "champs": "jhin, ashe",
+      "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
+      "rank": "I",
+      "tier": "IRON",
+      "id": 16
+    },
+    {
+      "username": "Yassuo",
+      "email": "moe@gmail.com",
+      "password": "password",
+      "purposeId": 2,
+      "summonerName": "Yassuo",
+      "bio": "i stream league on twitch.tv",
+      "champs": "Yasuo",
+      "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
+      "rank": "I",
+      "tier": "DIAMOND",
+      "id": 17
+    },
+    {
+      "username": "virbello",
+      "email": "connor@gmail.com",
+      "password": "password",
+      "purposeId": 4,
+      "summonerName": "meshaistaco",
+      "bio": "i am presenting and panicking badly",
+      "champs": "yasuo",
+      "pic": "http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder-350x350.png",
+      "rank": "II",
+      "tier": "SILVER",
+      "id": 18
     }
   ],
   "messages": [
     {
-      "text": "hey",
-      "userId": "1",
+      "text": "hey, anybody want to play?",
+      "userId": "3",
       "id": 1
+    },
+    {
+      "text": "help",
+      "userId": "18",
+      "id": 2
     }
   ],
   "friends": [
     {
-      "firstUserId": 6,
-      "secondUserId": 3,
+      "firstUserId": 3,
+      "secondUserId": 4,
       "id": 1
     },
     {
-      "firstUserId": 6,
-      "secondUserId": 5,
+      "firstUserId": 18,
+      "secondUserId": 4,
       "id": 2
     },
     {
-      "firstUserId": 6,
-      "secondUserId": 1,
+      "firstUserId": 18,
+      "secondUserId": 3,
       "id": 3
     },
     {
-      "firstUserId": 1,
+      "firstUserId": 18,
       "secondUserId": 2,
-      "id": 5
-    },
-    {
-      "firstUserId": 1,
-      "secondUserId": 5,
-      "id": 6
-    },
-    {
-      "firstUserId": 1,
-      "secondUserId": 4,
-      "id": 7
+      "id": 4
     }
   ],
   "purposes": [
