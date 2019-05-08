@@ -1,1 +1,1 @@
-![Splash page](https://ibb.co/6b7CWVM)
+![Splash page](https://i.imgur.com/yTivXNc.jpg)
