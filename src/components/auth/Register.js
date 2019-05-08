@@ -54,6 +54,7 @@ export default class Register extends Component {
                 sessionStorage.setItem("credentials", JSON.stringify(user.id));
                 this.props.refreshUsers()
                 this.props.history.push("/");
+                window.location.reload();
 
             })
         })

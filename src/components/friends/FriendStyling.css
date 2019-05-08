@@ -8,7 +8,7 @@
 
 .friendInfo{
     display: flex;
-    height: 75vh;
+    height: 90vh;
     align-content: space-evenly;
     text-align: center
 }
@@ -16,7 +16,8 @@
     height: 40%
 }
 .deleteButton{
-    font-size: 14pt
+    font-size: 14pt;
+    margin-top:auto
 }
 .friendsHeader{
     text-align: center;
